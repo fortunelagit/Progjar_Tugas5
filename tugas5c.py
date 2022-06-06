@@ -28,7 +28,7 @@ def getGoPackage(query, num):
     
     exp = []
     for i in soup.find('section', {'class':'Documentation-index'}).find_all('a'):
-        text = i.get_text().strip()
+        text = i.get_text().replace('¶', '').strip()
         exp.append(text)
        
     print("Results: ")    
