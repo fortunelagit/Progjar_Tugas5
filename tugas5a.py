@@ -8,8 +8,7 @@ html = requests.get(link).text
 soup = BeautifulSoup(html, 'html.parser')
 
 def getGoBlog(num):
-    
-    track_title = num.text.strip().replace(': ', '-')
+    track_title = num.text.strip().replace(': ', ' -> ')
     download_url = '{}{}'.format(h_link, num['href'])
     file_name = '{}.html'.format(track_title)
 
